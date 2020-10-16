@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="optionsForSpinner">
+        <item>By words</item>
+        <item>By characters</item>
+    </string-array>
+</resources>
