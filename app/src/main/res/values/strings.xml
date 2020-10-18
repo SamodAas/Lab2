@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">My Application</string>
+
     <string-array name="optionsForSpinner">
         <item>By words</item>
         <item>By characters</item>
     </string-array>
+
+    <string name="calcText">Choose calculation</string>
+    <string name="wordCountText">The count of words is:</string>
+    <string name="theButton">Calculate</string>
+    <string name="charCountText">The count of chars is:</string>
+    <string name="enterTextText">Please enter text:</string>
+    <string name="calcResult">0</string>
+    <string name="warningText">no strings found, please enter text</string>
+
 </resources>

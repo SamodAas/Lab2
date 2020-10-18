@@ -13,7 +13,7 @@
         android:layout_marginTop="140dp"
         android:layout_marginEnd="264dp"
         android:layout_marginRight="264dp"
-        android:text="Choose calculation:"
+        android:text="@string/calcText"
         app:layout_constraintBottom_toTopOf="@+id/optionSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/wordCountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The count of words is:"
+        android:text="@string/wordCountText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
-        android:text="Calculate"
+        android:text="@string/theButton"
         android:onClick="calculation"
         app:layout_constraintBottom_toTopOf="@+id/wordCountText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
         android:id="@+id/charCountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The count of chars is:"
+        android:text="@string/charCountText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -73,14 +73,14 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="276dp"
         android:layout_marginRight="276dp"
-        android:text="Please enter text:"
+        android:text="@string/enterTextText"
         app:layout_constraintBottom_toTopOf="@+id/optionSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.257" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/textForCalc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -98,10 +98,21 @@
         android:id="@+id/calcResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@string/calcResult"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wordCountText" />
+
+    <TextView
+        android:id="@+id/warningText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warningText"
+        app:layout_constraintBottom_toTopOf="@+id/calcResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionSpinner" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
