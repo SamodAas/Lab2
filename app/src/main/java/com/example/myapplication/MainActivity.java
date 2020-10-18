@@ -8,6 +8,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView wordResult;
     private TextView charResult;
     private TextView enteredText;
-    private TextView warningtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         this.wordResult.setVisibility(View.GONE);
         this.optionSpinner = findViewById(R.id.optionSpinner);
         this.enteredText = findViewById(R.id.textForCalc);
-        this.warningtext = findViewById(R.id.warningText);
-        this.warningtext.setVisibility(View.GONE);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource( this, R.array.optionsForSpinner, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -48,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
 
         if(text.equals("")){
 
-            this.warningtext.setVisibility(View.VISIBLE);
+            CharSequence warning = "no text found. Please enter text";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(this, warning, duration);
+            toast.show();
+
             this.charResult.setVisibility(View.GONE);
             this.wordResult.setVisibility(View.GONE);
 
@@ -56,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
             InputMethodManager manager = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
             manager.hideSoftInputFromWindow(view.getWindowToken(), 0);
-            this.warningtext.setVisibility(View.GONE);
 
             if (choice.equals(words)) {
 
