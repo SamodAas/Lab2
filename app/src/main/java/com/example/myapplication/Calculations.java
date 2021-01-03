@@ -4,7 +4,7 @@ public class Calculations {
 
     public static int calcByWords(String a){
         int x=0;
-        String[]count = a.split("[ ,.]");
+        String[]count = a.split("[ \\,\\.]+");
         x=count.length;
         return x;
     }
